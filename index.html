@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPK | 3D Visual Experience</title>
+    <!-- Version: 2.0.0 - Lusion Style Engine -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="loader-content">
+            <span class="count">0</span>%
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Background WebGL Canvas -->
+    <canvas class="webgl"></canvas>
+
+    <nav>
+        <div class="logos">
+            <img src="assets/jata-negara.png" alt="Jata Negara" class="logo">
+            <img src="assets/logo-jabatan.png" alt="Jabatan" class="logo">
+            <img src="assets/logo-bpk.png" alt="BPK" class="logo">
+        </div>
+        <div class="menu-btn">MENU</div>
+    </nav>
+
+    <div data-scroll-container>
+        
+        <!-- SECTION 1: HERO -->
+        <section class="hero" data-scroll-section>
+            <div class="hero-wrapper">
+                <h1 data-scroll data-scroll-speed="3" data-scroll-direction="horizontal">INNOVATION</h1>
+                <h1 data-scroll data-scroll-speed="-3" data-scroll-direction="horizontal" class="outline">EXCELLENCE</h1>
+            </div>
+            <div class="scroll-indicator">SCROLL TO EXPLORE</div>
+        </section>
+
+        <!-- SECTION 2: STORYTELLING VIDEO -->
+        <section class="video-section" data-scroll-section>
+            <div class="video-container" data-scroll data-scroll-speed="1">
+                <video autoplay muted loop playsinline src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-circuit-board-1545-large.mp4"></video>
+                <div class="video-overlay">
+                    <h2 data-scroll data-scroll-speed="2">DIGITAL TRANSFORMATION</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: INTERACTIVE GRID (Distorted Images) -->
+        <section class="grid-section" data-scroll-section>
+            <div class="grid-container">
+                <div class="grid-item" data-scroll>
+                    <div class="webgl-img-container">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800" alt="Work 1" class="webgl-target">
+                    </div>
+                    <p>01. STRATEGY</p>
+                </div>
+                <div class="grid-item" data-scroll>
+                    <div class="webgl-img-container">
+                        <img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?w=800" alt="Work 2" class="webgl-target">
+                    </div>
+                    <p>02. DESIGN</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: FOOTER -->
+        <section class="footer" data-scroll-section>
+            <h2 data-scroll data-scroll-speed="2">CONTACT US</h2>
+            <div class="footer-info">
+                <p>BPK MALAYSIA &copy; 2025 - V2.0.0</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Core Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
